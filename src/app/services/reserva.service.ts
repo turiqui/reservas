@@ -10,7 +10,11 @@ export class ReservaService {
   reservasList: AngularFireList<any>;
   selectedReserva: Reserva = new Reserva();
 
-  constructor(private firebase:AngularFireDatabase) { }
+  constructor(private firebase:AngularFireDatabase) {
+
+    this.selectedReserva.zona="";
+
+   }
 
   getReservasList(){
     return this.reservasList=this.firebase.list('reservas');

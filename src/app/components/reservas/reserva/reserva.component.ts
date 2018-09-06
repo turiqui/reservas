@@ -8,7 +8,13 @@ import { ReservaService } from '../../../services/reserva.service';
 })
 export class ReservaComponent implements OnInit {
 
-  constructor(private reservaService:ReservaService) { }
+  zonas: string[];
+
+  constructor(private reservaService:ReservaService) { 
+
+    this.zonas = ['Barra','Salón','Terraza'];
+
+  }
 
   ngOnInit() {
     this.reservaService.getReservasList();

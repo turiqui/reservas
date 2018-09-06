@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -28,7 +29,8 @@ import { ReservaService } from './services/reserva.service';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    FormsModule
+    FormsModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [ReservaService],
   bootstrap: [AppComponent]
