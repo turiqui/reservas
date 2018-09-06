@@ -4,13 +4,13 @@
 
 export const environment = {
   production: false,
-  firebase: {  
-    apiKey: "AIzaSyDlXKlsfosEYbhRsd-Uc1oFLd2hYLjIBwQ",
-    authDomain: "reservas-b3996.firebaseapp.com",
-    databaseURL: "https://reservas-b3996.firebaseio.com",
-    projectId: "reservas-b3996",
-    storageBucket: "",
-    messagingSenderId: "765655093531"
+  firebase: {
+    apiKey: "AIzaSyCn90qiQQwcF4js47mkn7HHnlrtbNsnlkM",
+    authDomain: "reservas-4848b.firebaseapp.com",
+    databaseURL: "https://reservas-4848b.firebaseio.com",
+    projectId: "reservas-4848b",
+    storageBucket: "reservas-4848b.appspot.com",
+    messagingSenderId: "88367983450"
   }
 };
 

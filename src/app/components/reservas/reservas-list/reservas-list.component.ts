@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Reserva } from '../../../models/reserva';
+import { ReservaService } from '../../../services/reserva.service';
 
 @Component({
   selector: 'app-reservas-list',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReservasListComponent implements OnInit {
 
-  constructor() { }
+  reservasList: Reserva[];
+
+  constructor(private reservaService:ReservaService) { }
 
   ngOnInit() {
+
+    return this.reservaService.getReservasList()
+      .snapshotChanges().subscribe(item => {
+        this.reservasList = [];
+        item.forEach(element => {
+          let x = element.payload.toJSON();
+          x["$key"] = element.key;
+          this.reservasList.push(x as Reserva);
+        });
+      });
   }
 
 }

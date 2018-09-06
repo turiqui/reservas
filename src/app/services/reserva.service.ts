@@ -17,7 +17,7 @@ export class ReservaService {
    }
 
   getReservasList(){
-    return this.reservasList=this.firebase.list('reservas');
+    return this.reservasList=this.firebase.list('/reservas');
   }
 
   insertReserva(reserva:Reserva){
@@ -26,7 +26,7 @@ export class ReservaService {
         nombre: reserva.nombre,
         apellidos: reserva.apellidos,
         telefono: reserva.telefono,
-        numComensalesTotal: reserva.numComensalesTotal,
+        numComensalesTotal: reserva.numComensalesNinios+reserva.numComensalesAdultos,
         numComensalesNinios: reserva.numComensalesNinios,
         numComensalesAdultos: reserva.numComensalesAdultos,
         zona: reserva.zona,
@@ -42,7 +42,7 @@ export class ReservaService {
         nombre: reserva.nombre,
         apellidos: reserva.apellidos,
         telefono: reserva.telefono,
-        numComensalesTotal: reserva.numComensalesTotal,
+        numComensalesTotal: reserva.numComensalesNinios+reserva.numComensalesAdultos,
         numComensalesNinios: reserva.numComensalesNinios,
         numComensalesAdultos: reserva.numComensalesAdultos,
         zona: reserva.zona,
